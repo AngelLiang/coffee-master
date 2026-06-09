@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 62, 44, 35;
+  --background-start-rgb: 253, 248, 246;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4a882;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a07e6f;
+}
+
+/* Markdown styles */
+.markdown-body h1 {
+  @apply text-3xl font-bold mb-4 text-coffee-900;
+}
+
+.markdown-body h2 {
+  @apply text-2xl font-bold mb-3 mt-6 text-coffee-800;
+}
+
+.markdown-body h3 {
+  @apply text-xl font-bold mb-2 mt-4 text-coffee-800;
+}
+
+.markdown-body p {
+  @apply mb-4 leading-relaxed text-coffee-700;
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside mb-4 text-coffee-700;
+}
+
+.markdown-body ol {
+  @apply list-decimal list-inside mb-4 text-coffee-700;
+}
+
+.markdown-body a {
+  @apply text-coffee-600 underline hover:text-coffee-800 transition-colors;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-coffee-400 pl-4 italic text-coffee-600 mb-4;
+}
+
+.markdown-body pre {
+  @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.markdown-body code {
+  @apply bg-gray-100 text-coffee-800 px-1 py-0.5 rounded text-sm;
+}
+
+.markdown-body pre code {
+  @apply bg-transparent text-gray-100 px-0 py-0;
+}
+
+/* Tables */
+.markdown-body table {
+  @apply w-full border-collapse border border-coffee-200 rounded-lg overflow-hidden mb-4 text-sm;
+}
+
+.markdown-body th {
+  @apply bg-coffee-100 text-coffee-900 font-semibold text-left px-3 py-2 border-b border-coffee-300;
+}
+
+.markdown-body td {
+  @apply px-3 py-2 border-b border-coffee-200 text-coffee-700;
+}
+
+.markdown-body tr:nth-child(even) {
+  @apply bg-coffee-50;
+}
+
+.markdown-body tr:hover {
+  @apply bg-coffee-100;
+}
+
+/* Inline elements */
+.markdown-body strong {
+  @apply font-semibold text-coffee-900;
+}
+
+.markdown-body em {
+  @apply italic text-coffee-700;
+}
+
+.markdown-body hr {
+  @apply border-t border-coffee-300 my-4;
+}
+
+/* Lists nesting */
+.markdown-body ul ul,
+.markdown-body ol ol,
+.markdown-body ul ol,
+.markdown-body ol ul {
+  @apply mt-1 mb-1 ml-4;
+}
+
+/* Images in markdown */
+.markdown-body img {
+  @apply max-w-full rounded-lg my-2;
+}

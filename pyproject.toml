@@ -8,4 +8,13 @@ dependencies = [
     "httpx[socks]>=0.28.1",
     "huggingface-hub>=1.18.0",
     "llama-cpp-python>=0.3.28",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.28.0",
 ]
