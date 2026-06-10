@@ -9,7 +9,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "首页" },
     { href: "/blog/", label: "博客" },
-    { href: "/about/", label: "关于我们" },
+    { href: "/about/", label: "关于项目" },
   ];
 
   return (

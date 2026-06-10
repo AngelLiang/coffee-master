@@ -38,7 +38,7 @@ export default function Footer() {
                   href="/about/"
                   className="hover:text-white transition-colors"
                 >
-                  关于我们
+                  关于项目
                 </Link>
               </li>
             </ul>
@@ -46,8 +46,28 @@ export default function Footer() {
 
           {/* External Links */}
           <div>
-            <h4 className="font-semibold mb-2">相关资源</h4>
+            <h4 className="font-semibold mb-2">HuggingFace 资源</h4>
             <ul className="space-y-1 text-sm text-coffee-300">
+              <li>
+                <a
+                  href="https://huggingface.co/spaces/ynanxiu/qwen25-15b-coffee-chat-gguf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  🤗 在线体验 (Space)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://huggingface.co/ynanxiu/qwen25-15b-coffee-lora-v5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  🧠 微调模型 (LoRA)
+                </a>
+              </li>
               <li>
                 <a
                   href="https://huggingface.co/ynanxiu/qwen25-15b-coffee-v5-gguf"
@@ -55,7 +75,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  🤗 HuggingFace 模型
+                  ⚡ 量化模型 (GGUF)
                 </a>
               </li>
               <li>

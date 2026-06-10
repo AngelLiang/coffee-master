@@ -158,7 +158,11 @@ function getRandomPrompts(count: number) {
 export default function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
-  const [displayPrompts] = useState(() => getRandomPrompts(6));
+  const [displayPrompts, setDisplayPrompts] = useState(() => getRandomPrompts(6));
+
+  const handleRefreshPrompts = useCallback(() => {
+    setDisplayPrompts(getRandomPrompts(6));
+  }, []);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
@@ -304,7 +308,7 @@ export default function ChatInterface() {
         <div className="flex items-center gap-2">
           <span className="text-xl">🤖</span>
           <span className="font-semibold">AI 咖啡大师</span>
-          <span className="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">
+          <span className="text-xs bg-caramel-500 text-white px-2 py-0.5 rounded-full">
             在线
           </span>
         </div>
@@ -334,23 +338,32 @@ export default function ChatInterface() {
       <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[400px] max-h-[600px]">
         {messages.length === 0 && (
           <div className="text-center text-coffee-400 py-12">
-            <span className="text-4xl mb-4 block">☕</span>
-            <p className="text-lg font-medium mb-2">欢迎来到咖啡大师</p>
+            <span className="text-5xl mb-4 block drop-shadow-lg">☕</span>
+            <p className="text-xl font-bold text-coffee-800 mb-2">今天想聊点什么？</p>
             <p className="text-sm mb-6">
-              我是您的 AI 咖啡助手，有任何咖啡相关的问题都可以问我！
+              从咖啡豆产地到萃取技巧，随时为你解答
             </p>
-            <div className="flex flex-wrap justify-center gap-2 max-w-md mx-auto">
+            <div className="flex flex-wrap justify-center gap-2 max-w-md mx-auto mb-4">
               {displayPrompts.map((prompt) => (
                 <button
                   key={prompt.text}
                   onClick={() => handleSend(prompt.text)}
-                  className="px-3 py-1.5 text-xs bg-coffee-100 hover:bg-coffee-200 text-coffee-800 rounded-full border border-coffee-200 transition-colors flex items-center gap-1.5"
+                  className="px-3 py-1.5 text-xs bg-coffee-100 hover:bg-coffee-200 hover:-translate-y-0.5 text-coffee-800 rounded-full border border-coffee-200 transition-all flex items-center gap-1.5 shadow-sm"
                 >
                   <span>{prompt.icon}</span>
                   {prompt.text}
                 </button>
               ))}
             </div>
+            <button
+              onClick={handleRefreshPrompts}
+              className="text-xs text-coffee-500 hover:text-coffee-700 transition-colors flex items-center gap-1 mx-auto"
+            >
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              换一批
+            </button>
           </div>
         )}
 

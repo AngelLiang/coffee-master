@@ -3,6 +3,41 @@
 import ChatInterface from "@/components/ChatInterface";
 import ProjectCard from "@/components/ProjectCard";
 
+const HF_RESOURCES = [
+  {
+    href: "https://huggingface.co/spaces/ynanxiu/qwen25-15b-coffee-chat-gguf",
+    emoji: "🤗",
+    label: "在线体验 (Space)",
+    sublabel: "qwen25-15b-coffee-chat-gguf",
+    gradient: "from-caramel-50 to-caramel-100",
+    border: "border-caramel-200 hover:border-caramel-400",
+  },
+  {
+    href: "https://huggingface.co/ynanxiu/qwen25-15b-coffee-lora-v5",
+    emoji: "🧠",
+    label: "微调模型 (LoRA)",
+    sublabel: "ynanxiu/qwen25-15b-coffee-lora-v5",
+    gradient: "from-caramel-50 to-caramel-100",
+    border: "border-caramel-200 hover:border-caramel-400",
+  },
+  {
+    href: "https://huggingface.co/ynanxiu/qwen25-15b-coffee-v5-gguf",
+    emoji: "⚡",
+    label: "量化模型 (GGUF)",
+    sublabel: "ynanxiu/qwen25-15b-coffee-v5-gguf",
+    gradient: "from-caramel-50 to-caramel-100",
+    border: "border-caramel-200 hover:border-caramel-400",
+  },
+  {
+    href: "https://huggingface.co/datasets/ynanxiu/coffee-sft-dataset",
+    emoji: "📊",
+    label: "训练数据集",
+    sublabel: "ynanxiu/coffee-sft-dataset",
+    gradient: "from-caramel-50 to-caramel-100",
+    border: "border-caramel-200 hover:border-caramel-400",
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-coffee-50 to-white">
@@ -28,98 +63,70 @@ export default function HomePage() {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-md border border-coffee-200 p-6 h-full">
               <h2 className="text-2xl font-bold text-coffee-900 mb-4 flex items-center gap-2">
-                <span className="text-3xl">🏆</span>
-                作品介绍
+                <span className="text-3xl">📋</span>
+                项目简介
               </h2>
-              <p className="text-coffee-700 leading-relaxed mb-6">
-                咖啡大师是一款咖啡领域 AI 小模型，基于 Qwen2.5-15B 经过大量专业数据微调而成
-                它能够回答关于咖啡豆选择、冲煮技巧、咖啡风味分析等各类专业问题，
-                为咖啡爱好者和从业者提供可靠的知识支持。
+              <p className="text-coffee-700 leading-relaxed mb-4">
+                基于 Qwen2.5-15B 微调，专注于咖啡领域的 AI 助手。
+                从咖啡豆产地到萃取技巧，提供深度、专业的咖啡知识问答。
               </p>
+
+              <div className="flex flex-col gap-2 mb-6">
+                {[
+                  { icon: "🔒", text: "本地运行，数据不上云", desc: "" },
+                  { icon: "💰", text: "免费对话，无 Token 计费", desc: "" },
+                  { icon: "🚀", text: "Space 在线 / Docker 一键部署", desc: "" },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-start gap-2 text-sm">
+                    <span className="text-base flex-shrink-0">{item.icon}</span>
+                    <div>
+                      <span className="font-medium text-coffee-900">{item.text}</span>
+                      {item.desc && <span className="text-coffee-500 ml-1">{item.desc}</span>}
+                    </div>
+                  </div>
+                ))}
+              </div>
 
               <div className="space-y-4">
                 <h3 className="font-semibold text-coffee-800 flex items-center gap-2">
-                  <span>🔗</span>
-                  相关链接
+                  <span>🤗</span>
+                  HuggingFace 开源资源
                 </h3>
                 <div className="space-y-3">
-                  <a
-                    href="https://huggingface.co/ynanxiu/qwen25-15b-coffee-v5-gguf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 hover:border-yellow-400 transition-colors group"
-                  >
-                    <span className="text-2xl group-hover:scale-110 transition-transform">
-                      🤗
-                    </span>
-                    <div>
-                      <div className="font-medium text-coffee-900">
-                        HuggingFace 模型
-                      </div>
-                      <div className="text-xs text-coffee-600 truncate max-w-[200px] sm:max-w-xs">
-                        ynanxiu/qwen25-15b-coffee-v5-gguf
-                      </div>
-                    </div>
-                    <svg
-                      className="w-4 h-4 ml-auto text-coffee-400 group-hover:text-coffee-600 transition-colors"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  {HF_RESOURCES.map((r) => (
+                    <a
+                      key={r.href}
+                      href={r.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r ${r.gradient} border ${r.border} transition-colors group`}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-
-                  <a
-                    href="https://huggingface.co/datasets/ynanxiu/coffee-sft-dataset"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 hover:border-blue-400 transition-colors group"
-                  >
-                    <span className="text-2xl group-hover:scale-110 transition-transform">📊</span>
-                    <div>
-                      <div className="font-medium text-coffee-900">训练数据集</div>
-                      <div className="text-xs text-coffee-600 truncate max-w-[200px] sm:max-w-xs">ynanxiu/coffee-sft-dataset</div>
-                    </div>
-                    <svg className="w-4 h-4 ml-auto text-coffee-400 group-hover:text-coffee-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                  </a>
-
-<a
-                    href="https://github.com/AngelLiang/coffee-master"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:border-gray-400 transition-colors group"
-                  >
-                    <span className="text-2xl group-hover:scale-110 transition-transform">
-                      🐙
-                    </span>
-                    <div>
-                      <div className="font-medium text-coffee-900">
-                        GitHub 仓库
+                      <span className="text-2xl group-hover:scale-110 transition-transform">
+                        {r.emoji}
+                      </span>
+                      <div>
+                        <div className="font-medium text-coffee-900">
+                          {r.label}
+                        </div>
+                        <div className="text-xs text-coffee-600 truncate max-w-[200px] sm:max-w-xs">
+                          {r.sublabel}
+                        </div>
                       </div>
-                      <div className="text-xs text-coffee-600">
-                        查看项目源代码
-                      </div>
-                    </div>
-                    <svg
-                      className="w-4 h-4 ml-auto text-coffee-400 group-hover:text-coffee-600 transition-colors"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
+                      <svg
+                        className="w-4 h-4 ml-auto text-coffee-400 group-hover:text-coffee-600 transition-colors"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
@@ -139,29 +146,29 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ProjectCard
               title="专业知识问答"
-              description="基于 Qwen2.5-15B 经过大量咖啡领域专业数据微调，在咖啡豆选择、冲煮技巧、风味分析等场景下提供深度、准确的回答，远超通用大模型的泛泛之谈。"
+              description="基于 Qwen2.5-15B 微调，在咖啡知识问答任务上远超通用大模型。从豆种产地到冲煮参数，提供专业、精准的解答。"
               links={[
                 {
-                  label: "查看模型详情",
-                  href: "https://huggingface.co/ynanxiu/qwen25-15b-coffee-v5-gguf",
-                  emoji: "🤗",
+                  label: "查看微调模型",
+                  href: "https://huggingface.co/ynanxiu/qwen25-15b-coffee-lora-v5",
+                  emoji: "🧠",
                 },
               ]}
             />
             <ProjectCard
               title="零成本无限对话"
-              description="一次部署，永久免费。无需 API 密钥，不按 Token 计费，对话再多也不产生额外费用。适合高频使用和批量推理场景。"
+              description="支持 HuggingFace Space 在线体验和本地 Docker 部署，无需 API 密钥。一次部署永久免费，不按 Token 计费。"
               links={[
                 {
-                  label: "快速开始部署",
-                  href: "https://github.com/AngelLiang/coffee-master",
-                  emoji: "🐙",
+                  label: "在线体验",
+                  href: "https://huggingface.co/spaces/ynanxiu/qwen25-15b-coffee-chat-gguf",
+                  emoji: "🤗",
                 },
               ]}
             />
             <ProjectCard
               title="本地部署，隐私可控"
-              description="所有对话数据都在本机处理，不上传云端，不留下痕迹。支持离线运行，无需依赖外部网络，你的咖啡探索完全属于你自己。"
+              description="基于 llama-cpp-python 本地推理，对话数据完全在本地处理，无需联网。支持离线运行，你的咖啡探索完全属于你自己。"
               links={[
                 {
                   label: "下载模型权重",

@@ -1,7 +1,7 @@
 import os
 
 MODEL_REPO_ID = os.getenv("COFFEE_MODEL_REPO", "ynanxiu/qwen25-15b-coffee-v5-gguf")
-MODEL_FILENAME = os.getenv("COFFEE_MODEL_FILE", "qwen25_15b-coffee-v5-q4_k_m.gguf")
+MODEL_FILENAME = os.getenv("COFFEE_MODEL_FILE", "qwen25_15b_coffee_v5_q4_k_m.gguf")
 MODEL_CHAT_FORMAT = os.getenv("COFFEE_MODEL_CHAT_FORMAT", "chatml")
 MODEL_LOCAL_PATH = os.getenv("COFFEE_MODEL_LOCAL_PATH", "")
 
