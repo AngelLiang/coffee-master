@@ -1,17 +1,11 @@
+from llama_cpp import Llama
+
 def main():
-    from llama_cpp import Llama
     llm = Llama.from_pretrained(
         repo_id="ynanxiu/qwen25-15b-coffee-v5-gguf",
-        filename="qwen25_15b-coffee-v5-q4_k_m.gguf",
+        filename="qwen25_15b_coffee_v5_q4_k_m.gguf",
         chat_format="chatml", 
     )
-
-    # llm = Llama(
-    #     model_path="./qwen25_15b-coffee-v5-q4_k_m.gguf",  # 本地文件路径
-    #     n_ctx=2048,        # 上下文长度
-    #     n_threads=4,       # CPU线程数
-    #     verbose=False,
-    # )
 
     output = llm.create_chat_completion(
         messages=[
