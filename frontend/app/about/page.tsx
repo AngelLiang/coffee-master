@@ -59,7 +59,7 @@ export default function AboutPage() {
               {
                 step: "02",
                 title: "微调训练",
-                desc: "基于 Qwen2.5-15B 进行咖啡领域专项 LoRA 微调",
+                desc: "基于 Qwen2.5-1.5B 进行咖啡领域专项 LoRA 微调",
               },
               {
                 step: "03",
@@ -111,14 +111,14 @@ export default function AboutPage() {
                 </h3>
               </div>
               <p className="text-coffee-600 text-sm mb-4">
-                基于 Qwen2.5-15B 的咖啡领域 LoRA 微调权重，包含完整的微调参数。
+                基于 Qwen2.5-1.5B 的咖啡领域 LoRA 微调权重，包含完整的微调参数。
               </p>
               <div className="flex flex-wrap gap-1.5 mb-4">
                 <span className="px-2 py-0.5 bg-caramel-100 text-caramel-800 text-xs rounded-full">
                   LoRA
                 </span>
                 <span className="px-2 py-0.5 bg-caramel-50 text-caramel-700 text-xs rounded-full">
-                  15B
+                  1.5B
                 </span>
                 <span className="px-2 py-0.5 bg-caramel-100 text-caramel-800 text-xs rounded-full">
                   Safetensors

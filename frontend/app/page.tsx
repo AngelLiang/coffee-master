@@ -50,7 +50,7 @@ export default function HomePage() {
               咖啡大师
             </h1>
             <p className="text-xl text-coffee-200 max-w-2xl mx-auto">
-              咖啡领域 AI 小模型，基于 Qwen2.5 微调，为您带来专业的咖啡知识与建议
+              咖啡领域 AI 小模型，基于 Qwen2.5-1.5B 微调，模仿金牌咖啡师提供专业知识问答
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function HomePage() {
                 项目简介
               </h2>
               <p className="text-coffee-700 leading-relaxed mb-4">
-                基于 Qwen2.5-15B 微调，专注于咖啡领域的 AI 助手。
+                基于 Qwen2.5-1.5B 微调，模仿金牌咖啡师的角色。
                 从咖啡豆产地到萃取技巧，提供深度、专业的咖啡知识问答。
               </p>
 
@@ -146,7 +146,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ProjectCard
               title="专业知识问答"
-              description="基于 Qwen2.5-15B 微调，在咖啡知识问答任务上远超通用大模型。从豆种产地到冲煮参数，提供专业、精准的解答。"
+              description="基于 Qwen2.5-1.5B 微调，模仿金牌咖啡师角色。从豆种产地到冲煮参数，提供专业、精准的解答。"
               links={[
                 {
                   label: "查看微调模型",
