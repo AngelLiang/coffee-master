@@ -60,7 +60,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-v21"
+                  href="https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-gguf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"

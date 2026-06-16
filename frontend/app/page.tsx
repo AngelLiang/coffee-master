@@ -13,10 +13,10 @@ const HF_RESOURCES = [
     border: "border-caramel-200 hover:border-caramel-400",
   },
   {
-    href: "https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-v21",
+    href: "https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-gguf",
     emoji: "🧠",
     label: "微调模型 (LoRA)",
-    sublabel: "ynanxiu/qwen25-3b-coffee-lora-v21",
+    sublabel: "ynanxiu/qwen25-3b-coffee-lora-gguf",
     gradient: "from-caramel-50 to-caramel-100",
     border: "border-caramel-200 hover:border-caramel-400",
   },
@@ -150,7 +150,7 @@ export default function HomePage() {
               links={[
                 {
                   label: "查看微调模型",
-                  href: "https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-v21",
+                  href: "https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-gguf",
                   emoji: "🧠",
                 },
               ]}

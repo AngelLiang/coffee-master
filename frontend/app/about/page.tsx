@@ -99,7 +99,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Original LoRA Model */}
             <a
-              href="https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-v21"
+              href="https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-gguf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white rounded-xl shadow-md border border-coffee-200 p-6 hover:shadow-lg hover:border-coffee-400 transition-all group"
@@ -125,7 +125,7 @@ export default function AboutPage() {
                 </span>
               </div>
               <div className="text-xs text-coffee-500 truncate group-hover:text-coffee-700 transition-colors">
-                ynanxiu/qwen25-3b-coffee-lora-v21
+                ynanxiu/qwen25-3b-coffee-lora-gguf
               </div>
             </a>
 
