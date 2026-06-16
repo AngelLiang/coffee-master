@@ -5,34 +5,34 @@ import ProjectCard from "@/components/ProjectCard";
 
 const HF_RESOURCES = [
   {
-    href: "https://huggingface.co/spaces/ynanxiu/qwen25-15b-coffee-chat-gguf",
+    href: "https://huggingface.co/spaces/ynanxiu/qwen25-3b-coffee-chat-gguf",
     emoji: "🤗",
     label: "在线体验 (Space)",
-    sublabel: "qwen25-15b-coffee-chat-gguf",
+    sublabel: "qwen25-3b-coffee-chat-gguf",
     gradient: "from-caramel-50 to-caramel-100",
     border: "border-caramel-200 hover:border-caramel-400",
   },
   {
-    href: "https://huggingface.co/ynanxiu/qwen25-15b-coffee-lora-v5",
+    href: "https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-v21",
     emoji: "🧠",
     label: "微调模型 (LoRA)",
-    sublabel: "ynanxiu/qwen25-15b-coffee-lora-v5",
+    sublabel: "ynanxiu/qwen25-3b-coffee-lora-v21",
     gradient: "from-caramel-50 to-caramel-100",
     border: "border-caramel-200 hover:border-caramel-400",
   },
   {
-    href: "https://huggingface.co/ynanxiu/qwen25-15b-coffee-v5-gguf",
+    href: "https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-gguf",
     emoji: "⚡",
     label: "量化模型 (GGUF)",
-    sublabel: "ynanxiu/qwen25-15b-coffee-v5-gguf",
+    sublabel: "ynanxiu/qwen25-3b-coffee-lora-gguf",
     gradient: "from-caramel-50 to-caramel-100",
     border: "border-caramel-200 hover:border-caramel-400",
   },
   {
-    href: "https://huggingface.co/datasets/ynanxiu/coffee-sft-dataset",
+    href: "https://huggingface.co/datasets/ynanxiu/coffee-barista-dataset",
     emoji: "📊",
     label: "训练数据集",
-    sublabel: "ynanxiu/coffee-sft-dataset",
+    sublabel: "ynanxiu/coffee-barista-dataset",
     gradient: "from-caramel-50 to-caramel-100",
     border: "border-caramel-200 hover:border-caramel-400",
   },
@@ -50,7 +50,7 @@ export default function HomePage() {
               咖啡大师
             </h1>
             <p className="text-xl text-coffee-200 max-w-2xl mx-auto">
-              咖啡领域 AI 小模型，基于 Qwen2.5-1.5B 微调，模仿金牌咖啡师提供专业知识问答
+              咖啡领域 AI 小模型，基于 Qwen2.5-3B 微调，模仿金牌咖啡师提供专业知识问答
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function HomePage() {
                 项目简介
               </h2>
               <p className="text-coffee-700 leading-relaxed mb-4">
-                基于 Qwen2.5-1.5B 微调，模仿金牌咖啡师的角色。
+                基于 Qwen2.5-3B 微调，模仿金牌咖啡师的角色。
                 从咖啡豆产地到萃取技巧，提供深度、专业的咖啡知识问答。
               </p>
 
@@ -146,11 +146,11 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ProjectCard
               title="专业知识问答"
-              description="基于 Qwen2.5-1.5B 微调，模仿金牌咖啡师角色。从豆种产地到冲煮参数，提供专业、精准的解答。"
+              description="基于 Qwen2.5-3B 微调，模仿金牌咖啡师角色。从豆种产地到冲煮参数，提供专业、精准的解答。"
               links={[
                 {
                   label: "查看微调模型",
-                  href: "https://huggingface.co/ynanxiu/qwen25-15b-coffee-lora-v5",
+                  href: "https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-v21",
                   emoji: "🧠",
                 },
               ]}
@@ -161,7 +161,7 @@ export default function HomePage() {
               links={[
                 {
                   label: "在线体验",
-                  href: "https://huggingface.co/spaces/ynanxiu/qwen25-15b-coffee-chat-gguf",
+                  href: "https://huggingface.co/spaces/ynanxiu/qwen25-3b-coffee-chat-gguf",
                   emoji: "🤗",
                 },
               ]}
@@ -172,7 +172,7 @@ export default function HomePage() {
               links={[
                 {
                   label: "下载模型权重",
-                  href: "https://huggingface.co/ynanxiu/qwen25-15b-coffee-v5-gguf",
+                  href: "https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-gguf",
                   emoji: "⬇️",
                 },
               ]}

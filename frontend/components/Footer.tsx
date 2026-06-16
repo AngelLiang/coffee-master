@@ -12,7 +12,7 @@ export default function Footer() {
               咖啡大师
             </h3>
             <p className="text-coffee-300 text-sm">
-              咖啡领域 AI 小模型，基于 Qwen2.5 微调，为您提供专业的咖啡知识。
+              咖啡领域 AI 小模型，基于 Qwen2.5-3B 微调，为您提供专业的咖啡知识。
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
             <ul className="space-y-1 text-sm text-coffee-300">
               <li>
                 <a
-                  href="https://huggingface.co/spaces/ynanxiu/qwen25-15b-coffee-chat-gguf"
+                  href="https://huggingface.co/spaces/ynanxiu/qwen25-3b-coffee-chat-gguf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -60,7 +60,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://huggingface.co/ynanxiu/qwen25-15b-coffee-lora-v5"
+                  href="https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-v21"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -70,7 +70,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://huggingface.co/ynanxiu/qwen25-15b-coffee-v5-gguf"
+                  href="https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-gguf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -80,7 +80,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://huggingface.co/datasets/ynanxiu/coffee-sft-dataset"
+                  href="https://huggingface.co/datasets/ynanxiu/coffee-barista-dataset"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"

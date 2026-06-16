@@ -16,10 +16,10 @@ export default function AboutPage() {
             咖啡大师
           </h1>
           <p className="text-xl text-coffee-600 max-w-2xl mx-auto mb-8">
-            咖啡领域 AI 小模型，基于 Qwen2.5 微调训练
+            咖啡领域 AI 小模型，基于 Qwen2.5-3B 微调训练
           </p>
           <a
-            href="https://huggingface.co/spaces/ynanxiu/qwen25-15b-coffee-chat-gguf"
+            href="https://huggingface.co/spaces/ynanxiu/qwen25-3b-coffee-chat-gguf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-caramel-400 to-caramel-600 hover:from-caramel-500 hover:to-caramel-700 text-white rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
@@ -59,7 +59,7 @@ export default function AboutPage() {
               {
                 step: "02",
                 title: "微调训练",
-                desc: "基于 Qwen2.5-1.5B 进行咖啡领域专项 LoRA 微调",
+                desc: "基于 Qwen2.5-3B 进行咖啡领域专项 LoRA 微调",
               },
               {
                 step: "03",
@@ -99,7 +99,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Original LoRA Model */}
             <a
-              href="https://huggingface.co/ynanxiu/qwen25-15b-coffee-lora-v5"
+              href="https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-v21"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white rounded-xl shadow-md border border-coffee-200 p-6 hover:shadow-lg hover:border-coffee-400 transition-all group"
@@ -111,27 +111,27 @@ export default function AboutPage() {
                 </h3>
               </div>
               <p className="text-coffee-600 text-sm mb-4">
-                基于 Qwen2.5-1.5B 的咖啡领域 LoRA 微调权重，包含完整的微调参数。
+                基于 Qwen2.5-3B 的咖啡领域 LoRA 微调权重，包含完整的微调参数。
               </p>
               <div className="flex flex-wrap gap-1.5 mb-4">
                 <span className="px-2 py-0.5 bg-caramel-100 text-caramel-800 text-xs rounded-full">
                   LoRA
                 </span>
                 <span className="px-2 py-0.5 bg-caramel-50 text-caramel-700 text-xs rounded-full">
-                  1.5B
+                  3B
                 </span>
                 <span className="px-2 py-0.5 bg-caramel-100 text-caramel-800 text-xs rounded-full">
                   Safetensors
                 </span>
               </div>
               <div className="text-xs text-coffee-500 truncate group-hover:text-coffee-700 transition-colors">
-                ynanxiu/qwen25-15b-coffee-lora-v5
+                ynanxiu/qwen25-3b-coffee-lora-v21
               </div>
             </a>
 
             {/* Quantized GGUF Model */}
             <a
-              href="https://huggingface.co/ynanxiu/qwen25-15b-coffee-v5-gguf"
+              href="https://huggingface.co/ynanxiu/qwen25-3b-coffee-lora-gguf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white rounded-xl shadow-md border border-coffee-200 p-6 hover:shadow-lg hover:border-coffee-400 transition-all group"
@@ -158,13 +158,13 @@ export default function AboutPage() {
                 </span>
               </div>
               <div className="text-xs text-coffee-500 truncate group-hover:text-coffee-700 transition-colors">
-                ynanxiu/qwen25-15b-coffee-v5-gguf
+                ynanxiu/qwen25-3b-coffee-lora-gguf
               </div>
             </a>
 
             {/* Dataset */}
             <a
-              href="https://huggingface.co/datasets/ynanxiu/coffee-sft-dataset"
+              href="https://huggingface.co/datasets/ynanxiu/coffee-barista-dataset"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white rounded-xl shadow-md border border-coffee-200 p-6 hover:shadow-lg hover:border-coffee-400 transition-all group"
@@ -188,7 +188,7 @@ export default function AboutPage() {
                 </span>
               </div>
               <div className="text-xs text-coffee-500 truncate group-hover:text-coffee-700 transition-colors">
-                ynanxiu/coffee-sft-dataset
+                ynanxiu/coffee-barista-dataset
               </div>
             </a>
           </div>
