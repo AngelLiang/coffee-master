@@ -1,5 +1,9 @@
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 MODEL_REPO_ID = os.getenv("COFFEE_MODEL_REPO", "ynanxiu/qwen25-15b-coffee-v5-gguf")
 MODEL_FILENAME = os.getenv("COFFEE_MODEL_FILE", "qwen25_15b_coffee_v5_q4_k_m.gguf")
 MODEL_CHAT_FORMAT = os.getenv("COFFEE_MODEL_CHAT_FORMAT", "chatml")
